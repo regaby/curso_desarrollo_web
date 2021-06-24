@@ -8,4 +8,5 @@ def index(request):
     return HttpResponse('Practica python!')
 
 def febrero(request):
+    # esto es un comentario
     return HttpResponse('Haz ejercicio!')
