@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'desafios',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -54,7 +55,9 @@ ROOT_URLCONF = 'curso_desarrollo_web.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            #BASE_DIR / "desafios" / "templates"
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
