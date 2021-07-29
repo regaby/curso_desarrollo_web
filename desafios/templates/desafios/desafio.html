@@ -1,0 +1,13 @@
+{% extends "templates/base.html" %}
+
+{% block titulo %}Desafio mensual{% endblock%}
+
+{% block contenido%}
+    <h1>Desafio mensual</h1>
+    {% if texto_desafio %}
+        <h2>{{ texto_desafio | upper }}</h2>
+    {% else %}
+        <h2>No hay un desafio para este mes...</h2>
+    {% endif %}
+
+{% endblock%}
