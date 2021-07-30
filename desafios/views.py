@@ -18,7 +18,7 @@ desafios = {
     'septiembre': 'Come menos carne.',
     'octubre': 'Practica python!',
     'noviembre': 'Haz ejercicio!',
-    'diciembre': 'Come menos carne.',
+    'diciembre': None,
 }
 
 def index(request):
@@ -45,7 +45,7 @@ def desafio_mensual(request, mes):
     try:
         #texto_desafio = desafios[mes]
         #texto_desafio = render_to_string("desafios/desafio.html")
-        return render(request, "desafios/desafio.html", {'texto': desafios[mes],'mes': mes})
+        return render(request, "desafios/desafio.html", {'texto_desafio': desafios[mes], 'mes': mes})
     except:
         return HttpResponseNotFound('<h2>mes no implementado<h2>')
     return HttpResponse(f'<h1>{texto_desafio}</h1>')

@@ -1,16 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% block titulo %}Desafio mensual {{ mes }}{% endblock %}
+{% block contenido %}
+    {% include "desafios/includes/navbar.html" %}
+    <h1>Desafio del mes {{ mes }}</h1>
+    {% if texto_desafio %}
+        <h2>{{ texto_desafio }}</h2>
+    {% else %}
+        <p>Mes no implementado</p>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafio mensual {{ mes | title }}</title>
-</head>
+    {% endif %}
 
-<body>
-    <h1>Desafio mensual {{ mes|title }}</h1>
     <h2>{{ texto }}</h2>
-</body>
-
-</html>
+{% endblock %}
