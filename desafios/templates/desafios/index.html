@@ -1,6 +1,15 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block archivos_css %}
+    <link rel="stylesheet" href="{% static "desafios/desafios.css" %}">
+    <link rel="stylesheet" href="{% static "desafios/includes/header.css" %}">
+{% endblock %}
+
 {% block titulo %}Desafios App{% endblock %}
 {% block contenido %}
+    {% include "desafios/includes/navbar.html" %}
+
     <ul>
         {% for mes in lista_meses %}
             <li><a href={% url 'desafio-mensual' mes %}>{{ mes }}</a></li>

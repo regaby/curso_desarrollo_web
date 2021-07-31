@@ -1,5 +1,11 @@
 {% extends "base.html" %}
+{% load static %}
+
 {% block titulo %}Desafio mensual {{ mes }}{% endblock %}
+{% block archivos_css %}
+    <link rel="stylesheet" href="{% static "desafios/desafio.css" %}">
+    <link rel="stylesheet" href="{% static "desafios/includes/header.css" %}">
+{% endblock %}
 {% block contenido %}
     {% include "desafios/includes/navbar.html" %}
     <h1>Desafio del mes {{ mes }}</h1>
